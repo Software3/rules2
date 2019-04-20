@@ -21,7 +21,7 @@ public class SignonDAOimpl extends AbstractDAO implements SignonDAO {
         Session session = HibernateUtil.getSession();
         Transaction transaction = getTransation(session);
         try {
-            String hql = "select account from Account as account,  Signon signon " + "where signon.studentId=account.studentId and signon.studentId=" + studentId + " and signon.password='"+ password +"'";
+            String hql = "select account from Account as account,  Signon signon " + "where signon.studentId=account.studentId and signon.studentId='" + studentId + "' and signon.password='"+ password +"'";
             List<Account> list = session.createQuery(hql).list();
             session.flush();
             transaction.commit();
