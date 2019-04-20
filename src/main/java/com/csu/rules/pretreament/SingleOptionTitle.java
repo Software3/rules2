@@ -19,7 +19,8 @@ public class SingleOptionTitle extends AbstractTitle {
             option.setOptionId(soid++);
             option.setChecked(terms[i].charAt(0) == choice.charAt(0) ? (byte) 1 : (byte) 0);
             option.setTitleId(this.id);
-            option.setContent(terms[i].trim().replace('"', '“'));
+            String optionContent = terms[i].trim().replace('"', '“');
+            option.setContent(optionContent.substring(2));
             this.options.add(option);
         }
         this.score = score;
