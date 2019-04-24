@@ -192,7 +192,10 @@ public class TestActionBean extends AbstractActionBean {
             paperrecord.setDiscussAnswer(recordTitles.getSubmitPaper().getDiscussAnswer());
             paperrecord.setIsCorrected(1);
             testService.insertPaperrecord(paperrecord);
-            return new ResponseEntity(testrecord, HttpStatus.OK);
+            recordTitles.getSubmitPaper().setTitleList(titleService.submitTitleList2(recordTitles.getSubmitPaper().getTitleList()));
+            recordTitles.getSubmitPaper().setBlanksList(titleService.submitAdditionList2(recordTitles.getSubmitPaper().getBlanksList()));
+            recordTitles.getSubmitPaper().setShortList(titleService.submitAdditionList2(recordTitles.getSubmitPaper().getShortList()));
+            return new ResponseEntity(recordTitles, HttpStatus.OK);
         } catch (TitleServiceException var5) {
             throw new CatchServiceException(var5);
         } catch (TestServiceException var6) {

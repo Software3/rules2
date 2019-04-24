@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by GF on 2017/6/24.
  */
 // 题目组
@@ -280,14 +280,14 @@ function submitPaper(testId,choiceList,blankList,judgeList,shortList,caseStr,dis
             // 或者说不我能让三个函数一起去访问同一个方法吗?
             var id=document.getElementById("testId").innerText;
             if(id==getTestId()){
-                getCorrectTitle();
-                getCorrectBlankTitle();
-                getCorrectShortTitle();
+                getCorrectTitle(data);
+                getCorrectBlankTitle(data);
+                getCorrectShortTitle(data);
                 reviewAnswer();
             }else{
-                getContestCorrectTitle();
-                getContestCorrectBlankTitle();
-                getContestCorrectShortTitle();
+                getContestCorrectTitle(data);
+                getContestCorrectBlankTitle(data);
+                getContestCorrectShortTitle(data);
                 reviewContestAnswer();
             }
         },
@@ -308,8 +308,9 @@ function submitPaper(testId,choiceList,blankList,judgeList,shortList,caseStr,dis
 }
 
 // 三个用来拿哪里出错了,一个用来呈现,处理答案在submitToBack里了
-function getCorrectTitle() {
-    this.account = getAccount();
+function getCorrectTitle(data) {
+    correctTitleList = data.submitPaper.titleList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, titleList: testTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -336,10 +337,11 @@ function getCorrectTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
-function getCorrectBlankTitle() {
-    this.account = getAccount();
+function getCorrectBlankTitle(data) {
+    testBlankTitleList = data.submitPaper.blanksList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, additiontitleList: answerBlankTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -365,10 +367,11 @@ function getCorrectBlankTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
-function getCorrectShortTitle() {
-    this.account = getAccount();
+function getCorrectShortTitle(data) {
+    testShortTitleList = data.submitPaper.shortList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, additiontitleList: answerShortTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -394,16 +397,17 @@ function getCorrectShortTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
+
 function reviewAnswer() {
     $('#testTitle').html("");
     $('#testId').html(testId);
     clearInterval(int);
-    // $('#testCountMsg').html("");
-    // // 选择题
-    // $('#testId').html(testId);
+    $('#testCountMsg').html("");
     // 选择题
+    $('#testId').html(testId);
+
     $('#testTitle').append("一、单选题")
     for (var i = 0; i < testTitleList.length; i++) {
         $('#testTitle').append("<table style=\"font-family: '宋体'; font-size: 16px;\">" +
@@ -451,7 +455,7 @@ function reviewAnswer() {
         }
         // $("#"+"testBlankTitle"+i).css("color","red");
         // debug(blankRes[i].answer);
-        if(blankRes[i].answer === "0"){
+        if(answerBlankTitleList[i].answer !== testBlankTitleList[i].answer){
             $("#"+"testBlankTitle"+i).css("color","red");
         }
     }
@@ -484,7 +488,8 @@ function reviewAnswer() {
         })
         // debug(shortRes[i].answer);
         // $("#"+"testShortTitle"+i).css("color","red");
-        if(shortRes[i].answer === "0"){
+        var preUserAns = preWork(answerShortTitleList[i].answer);
+        if(/*shortRes[i].answer === "0"*/ preAns !== preUserAns){
             $("#"+"testShortTitle"+i).css("color","red");
         }
     }
@@ -493,6 +498,7 @@ function reviewAnswer() {
     $("input[type='checkbox']").prop("disabled", "true");
     $("input[type='radio']").prop("disabled", "true");
 }
+
 
 // 辅助性功能函数去
 function preWork(str) {

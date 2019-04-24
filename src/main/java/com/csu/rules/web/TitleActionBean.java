@@ -74,12 +74,15 @@ public class TitleActionBean extends AbstractActionBean {
 //            throw new CatchServiceException(te);
 //        }
 //    }
-
+    // 该方法只接受练习模块的提交
     @RequestMapping(value = "/practiceAnswer", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Paper> practiceAnswer(@RequestBody AccountTitles accountTitles) {
         try {
             Paper paper = new Paper();
             List checkedTitleList = null;
+            if (!checkPracticeSubmit(accountTitles))
+                return new ResponseEntity<Paper>((Paper) null, HttpStatus.OK);
+
             if (accountTitles.getTitleList() != null){
                 checkedTitleList = titleService.submitTitleList2(accountTitles.getTitleList());
                 paper.setTitleList(checkedTitleList);
@@ -93,7 +96,22 @@ public class TitleActionBean extends AbstractActionBean {
         }
     }
 
+    private boolean checkPracticeSubmit(AccountTitles accountTitles) {
+        List<Title> titleList = null;
+        List<Additiontitle> additiontitles = null;
+        boolean isPractice = true;
+        if ((titleList = accountTitles.getTitleList()) != null) {
+            if (titleList.get(titleList.size()-1).getTitleId() - titleList.get(0).getTitleId() != 9)
+                isPractice = false;
+        }
 
+        if (isPractice && (additiontitles = accountTitles.getAdditiontitleList()) != null) {
+            if (additiontitles.get(additiontitles.size()-1).getTitleId() - additiontitles.get(0).getTitleId() != 9)
+                isPractice = false;
+        }
+
+        return isPractice;
+    }
 
     @RequestMapping(value = "/wrongList", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Result> wrongList(@RequestBody Account account) {

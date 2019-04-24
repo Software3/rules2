@@ -74,6 +74,8 @@ public interface TitleService {
     List<Title> submitTitleList(Account account, List<Title> titleList) throws TitleServiceException;
 
     List<Title> submitTitleList2( List<Title> titleList)throws TitleServiceException;
+
+    List<Additiontitle> submitAdditionList2( List<Additiontitle> titleList)throws TitleServiceException;
     /**
      * 试题练习模块提交非选择题目
      * @param account

@@ -182,6 +182,26 @@ public class TitleServiceimpl implements TitleService {
         }
     }
 
+    public List<Additiontitle> submitAdditionList2(List<Additiontitle> titleList) throws TitleServiceException {
+        try {
+            TitleServiceException te = new TitleServiceException();
+            if (titleList == null || titleList.size() == 0) {
+                te.setErrorCode(53);
+                throw te;
+            }
+            List<Additiontitle> list = new ArrayList<Additiontitle>(titleList.size());
+            for (int i = 0; i < titleList.size(); i++) {
+                Additiontitle title = additiontitleDAO.getTitle(titleList.get(i).getTitleId());
+                list.add(title);
+            }
+            return list;
+        } catch (PersistenceException pe) {
+            TitleServiceException te = new TitleServiceException(pe);
+            te.setErrorCode(50);
+            throw te;
+        }
+    }
+
     public List<Additiontitle> submitAdditionList(Account account, List<Additiontitle> titleList) throws TitleServiceException {
         try {
             TitleServiceException te = new TitleServiceException();

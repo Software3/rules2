@@ -164,6 +164,7 @@ public class TestRecordDAOimpl extends AbstractDAO implements TestRecordDAO {
             hql += " and a.studentId=t.studentId";
         }
         System.out.println(hql);
+        hql += " and t.testId=1";
         return hql;
     }
 

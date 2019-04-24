@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by GF on 2017/7/2.
  */
 // 题目组
@@ -160,8 +160,9 @@ function submitContestShortTitle() {
     }
 }
 
-function getContestCorrectTitle() {
-    this.account = getAccount();
+function getContestCorrectTitle(data) {
+    correctContestTitleList = data.submitPaper.titleList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, titleList: contestTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -188,10 +189,11 @@ function getContestCorrectTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
-function getContestCorrectBlankTitle() {
-    this.account = getAccount();
+function getContestCorrectBlankTitle(data) {
+    contestBlankTitleList = data.submitPaper.blanksList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, additiontitleList: answerContestBlankTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -217,10 +219,11 @@ function getContestCorrectBlankTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
-function getContestCorrectShortTitle() {
-    this.account = getAccount();
+function getContestCorrectShortTitle(data) {
+    contestShortTitleList = data.submitPaper.shortList;
+    /*this.account = getAccount();
     var accountTitles = {account: this.account, additiontitleList: answerContestShortTitleList};
     var accountTitlesJson = $.toJSON(accountTitles);
     $.ajaxSetup({contentType: 'application/json'});
@@ -246,16 +249,17 @@ function getContestCorrectShortTitle() {
     }).always(function () {
         // 不管成功或失败都要做的工作
         console.log('complete');
-    });
+    });*/
 }
+
 function reviewContestAnswer() {
     $('#testTitle').html("");
     $('#testId').html(testId);
     clearInterval(int);
-    // $('#testCountMsg').html("");
-    // // 选择题
-    // $('#testId').html(testId);
+    $('#testCountMsg').html("");
     // 选择题
+    $('#testId').html(testId);
+
     $('#testTitle').append("一、单选题")
     for (var i = 0; i < contestTitleList.length; i++) {
         $('#testTitle').append("<table style=\"font-family: '宋体'; font-size: 16px;\">" +
@@ -297,7 +301,7 @@ function reviewContestAnswer() {
         }else{
             $("input:radio[name='"+contestBlankTitleList[i].titleId+"']").eq(1).attr("checked","true");
         }
-        if(blankContestRes[i].answer === "0"){
+        if(answerContestBlankTitleList[i].answer !== contestBlankTitleList[i].answer){
             $("#"+"contestBlankTitle"+i).css("color","red");
         }
     }
@@ -328,7 +332,8 @@ function reviewContestAnswer() {
             }
             j++;
         });
-        if(shortContestRes[i].answer === "0"){
+        var preUserAns = preWork(answerContestShortTitleList[i].answer);
+        if(preAns !== preUserAns){
             $("#"+"contestShortTitle"+i).css("color","red");
         }
     }
@@ -337,6 +342,7 @@ function reviewContestAnswer() {
     $("input[type='checkbox']").prop("disabled", "true");
     $("input[type='radio']").prop("disabled", "true");
 }
+
 
 var int;
 function setContestTime() {
