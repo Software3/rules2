@@ -177,7 +177,7 @@ function createQuestionBank(subjectTitle) {
                     "<th colspan=\"4\"><span>" + ((choicepage-1)*10 + i + 1) + ".</span>" + practiceTitle[i].name + "</th>" +
                     "</tr>" +
                     "<br>");
-                for (var j = 0; j < 4; j++) {
+                for (var j = 0; j < practiceTitle[i].options.length; j++) {
                     var str = "A";
                     practiceTitle[i].options[j].checked = 0;
                     $('#title').append("<tr><td><input name=\""+practiceTitle[i].titleId+"\" type=\"radio\" onclick=\"addTitleToList("+i+","+j+")\"/>" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + practiceTitle[i].options[j].content + "&nbsp;</td></tr>");
@@ -345,7 +345,7 @@ function submitTitle(subjectTitle) {
                     "<br>");
                 var userAnswer = -1, standAnswer = 0;
                 console.log(i+1);
-                for (var j = 0; j < 4; j++) {
+                for (var j = 0; j < correctTitleList[i].options.length; j++) {
                     var str = "A";
                     $('#title').append("<tr><td><input name=\"" + practiceTitle[i].titleId +  "\" type=\"radio\" >" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + practiceTitle[i].options[j].content + "&nbsp;</td></tr>");
                     // 遇到惊天神奇无敌大Bug了,标记个时间留念一下,2018/4/19 16:51 好吧是我自己太傻了,也记录一下2018/4/19 17:22

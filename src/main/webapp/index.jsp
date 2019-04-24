@@ -405,11 +405,10 @@
                     </h1>
                     <p>
                         <strong>中南大学大学生网络安全知识竞赛</strong>
-                        以《党的十九大报告》、《习近平总书记在网络安全和信息化工作座谈会上的讲话》、
-                        《2018年两会工作报告》、《中华人民共和国网络安全法》等有关网络安全内容为纲，以电子政务安全、金融网络安全、电信网络安全、大学生上网安全、
-                        防范网络欺诈、网络安全技术等几个方面的内容为主，增强中南学子网络安全意识，
-                        引导广大学子树立正确的网络安全观，普及网络安全知识，提高网络素养，
-                        营造健康文明的网络环境，共同维护国家网络安全。
+                        本次网络安全只是竞赛以《党的十九大报告》、《习近平总书记在网络安全和信息化工作座谈会上的讲话》、
+                        《两会工作报告》等有关网络安全内容为纲，以电子政务安全、金融网络安全、电信网络安全、大学生上网安全、
+                        防范网络欺诈、网络安全技术等几个方面的内容为主，增强中南学子网络安全意识，引导广大学子树立正确的网络安全观，
+                        普及网络安全知识，提高网络素养，营造健康文明的网络环境，共同维护国家网络安全。
                     </p>
                     <%--<p class="popover-options">--%>
                     <%--<a type="button" class="btn btn-primary btn-lg"><img--%>
@@ -452,7 +451,7 @@
                     <br>
                     <p>初赛面向  <strong>全体在校本科生及研究生</strong></p>
                     <br>
-                    <p>现系统提供<strong>模拟自测</strong>，初赛考试将于<strong>5月1日—5月10日开放</strong></p>
+                    <p>现系统提供<strong>模拟自测</strong>，初赛考试将于<strong>4月24日—5月10日开放</strong></p>
                     <br>
                     <p>模拟自测可以重复进行，初赛<strong>每个账号只能考一次</strong></p>
                     <br>
@@ -962,17 +961,17 @@
         var username = getAccount().username;
         var college = getAccount().college;
         var nob = getAccount().studentId.toString();
-        var r = confirm("您是研究生吗？");
-        if (r == true){
-            if (nob.length == 8) {nob = 0  +nob}
-        }
-        else{
-            if (nob.length == 9) {nob = 0 + nob};
-            if (nob.length == 13) {
-                alphabet= String.fromCharCode(64 + parseInt(nob.substr(1, 2)));
-                nob = alphabet + nob.slice("3");
-            };
-        };
+        // var r = confirm("您是研究生吗？");
+        // if (r == true){
+        //     if (nob.length == 8) {nob = 0  +nob}
+        // }
+        // else{
+        //     if (nob.length == 9) {nob = 0 + nob};
+        //     if (nob.length == 13) {
+        //         alphabet= String.fromCharCode(64 + parseInt(nob.substr(1, 2)));
+        //         nob = alphabet + nob.slice("3");
+        //     };
+        // };
         var img = document.getElementById("img");
         var canvas=document.getElementById("cvs");
         var ctx=canvas.getContext("2d");

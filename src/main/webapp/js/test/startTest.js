@@ -67,7 +67,7 @@ function startTest() {
                     "<th colspan=\"4\"><span>" + (i + 1) + ".</span>" + testTitleList[i].name + "</th>" +
                     "</tr>" +
                     "<br>");
-                for (var j = 0; j < 4; j++) {
+                for (var j = 0; j < testTitleList[i].options.length; j++) {
                     testTitleList[i].options[j].checked = 0;
                     var str = "A";
                     $('#testTitle').append("<tr><td><input name=\"" + testTitleList[i].titleId + "\" type=\"radio\" onclick=\"addTitleToTestList(" + i + "," + j + ")\"/>" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + testTitleList[i].options[j].content + "&nbsp;</td></tr>");
@@ -416,7 +416,7 @@ function reviewAnswer() {
             "</tr>" +
             "<br>");
         var userAnswer = -1, standAnswer = 0;
-        for (var j = 0; j < 4; j++) {
+        for (var j = 0; j < correctTitleList[i].options.length; j++) {
             var str = "A";
             $('#testTitle').append("<tr><td><input name=\"" + testTitleList[i].titleId +  "\" type=\"radio\" >" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + testTitleList[i].options[j].content + "&nbsp;</td></tr>"
             );
