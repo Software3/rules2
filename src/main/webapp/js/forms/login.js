@@ -34,7 +34,7 @@ function loginForJson(signonJson) {
                 student_id = data.studentId;
                 getTestRecord(data.studentId);
                 getContestRecord(data.studentId);
-                isRegisted();
+                // isRegisted();
                 $("#isSimulationLogin").html("&nbsp;");
                 $('#isSimulationBlankLogin').html("&nbsp;");
                 $('#isSimulationShortLogin').html("&nbsp;");
@@ -42,6 +42,7 @@ function loginForJson(signonJson) {
                 $("#isLogin").html("&nbsp;");
                 $("#isContestLogin").html("&nbsp;");
                 $("#register-li").hide();
+
                 changeStatus();
             } else {
                 $('#loginMessage').html("用户名或密码错误");

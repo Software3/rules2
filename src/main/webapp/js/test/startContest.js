@@ -19,16 +19,21 @@ var contestCaseAnswer;
 var contestDiscussAnswer;
 
 function enterContest() {
-    if(getScore()==null) {
-        startContest();
-        setContestTime();
-        $('#startContestModal').attr("data-toggle", 'modal');
-        $('#startContestModal').attr("data-target", '#testModal');
-    }else{
-        $('#startContestModal').attr("data-toggle", '');
-        $('#startContestModal').attr("data-target", '');
-        $('#isContested').html("已考试");
+    if(!(getStudentId()==null || getStudentId()==undefined || getStudentId()=='')) {
+        if(getScore()==null) {
+            startContest();
+            setContestTime();
+            $('#startContestModal').attr("data-toggle", 'modal');
+            $('#startContestModal').attr("data-target", '#testModal');
+        }else{
+            $('#startContestModal').attr("data-toggle", '');
+            $('#startContestModal').attr("data-target", '');
+            $('#isContested').html("已考试");
+        }
+    } else {
+        $('#isContestLogin').html('请先登录');
     }
+
 }
 function startContest() {
     $('#testTitle').html("");

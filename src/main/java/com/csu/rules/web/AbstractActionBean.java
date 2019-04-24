@@ -16,6 +16,8 @@ public abstract class AbstractActionBean {
     public @ResponseBody
     Error serviceError(CatchServiceException e) {
         Error error = new Error(e.getServiceException().getErrorCode(), "error");
+        e.printStackTrace();
+        e.getServiceException().printStackTrace();
         return error;
     }
 }

@@ -334,7 +334,7 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div style="width:80%">
-                                            <h3>竞赛信息</h3>
+                                            <h3>考试信息</h3>
                                             <div class="btn-group">
                                                 <a class="btn btn-primary" onclick="onContestSearchBT(this)"
                                                    id="contest_search">查询</a>
@@ -419,7 +419,7 @@
                                     </div>
                                     <div class="col-md-5" style="border-left: 1px solid #e7e7eb;padding-left:40px ">
                                         <div style="width:80%">
-                                            <h3>考试信息</h3>
+                                            <h3>竞赛信息</h3>
                                             <div class="btn-group">
                                                 <a class="btn btn-primary" onclick="onTestSearchBT(this)"
                                                    id="test_search">查询</a>
