@@ -1,0 +1,2 @@
+1. 由cookie进入的login与getContestInfo存在并发 会存在没有拿到testId而发起changeStatus情况
+2. 练习部分最后一页会出bug
