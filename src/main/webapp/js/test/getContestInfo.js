@@ -55,6 +55,7 @@ $(function () {
                 $('#regist').hide();
                 $('#enter').hide();
             }
+            initLogin();
         },
         error: function (xhr) {
             // 导致出错的原因较多，以后再研究

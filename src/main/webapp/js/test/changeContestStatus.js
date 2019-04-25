@@ -22,14 +22,20 @@ function changeStatus() {
             }else {
                 if (data.status == 0) {
                     $('#regist').hide();
+                    $('#enter').hide();
                     $('#notBegin').show();
+                    $('#isEnd').hide();
                 }
                 if (data.status == 1) {
                     $('#regist').hide();
                     $('#enter').show();
+                    $('#notBegin').hide();
+                    $('#isEnd').hide();
                 }
                 if (data.status == 2) {
                     $('#regist').hide();
+                    $('#enter').hide();
+                    $('#notBegin').hide();
                     $('#isEnd').show();
                 }
             }

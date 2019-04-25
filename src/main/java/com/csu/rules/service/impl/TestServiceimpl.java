@@ -78,15 +78,20 @@ public class TestServiceimpl implements TestService {
     }
 
     public Contestregistion changeContestStatus(Contestregistion contestregistion) throws TestServiceException {
+        // 因为取消了报名...所以这里可能是空的
         try {
             Testinfo testinfo = testDAO.getTestInfo(contestregistion.getTestId());
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
+            if(testinfo == null) {
+                return new Contestregistion();
+            }
             Timestamp startTime = testinfo.getStartTime();
             Timestamp endTime = testinfo.getEndTime();
             if (currentTime.before(endTime) && currentTime.after(startTime)) {
                 Contestregistion contest = new Contestregistion();
 //                contestTestDAO.changeContestStatusBegin(contestregistion);
 //                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStudentId(contestregistion.getStudentId());
                 contest.setStatus(1);
                 return contest;
             }
@@ -94,12 +99,14 @@ public class TestServiceimpl implements TestService {
                 Contestregistion contest = new Contestregistion();
 //                contestTestDAO.changeContestStatusEnd(contestregistion);
 //                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStudentId(contestregistion.getStudentId());
                 contest.setStatus(2);
                 return contest;
             }else{
                 Contestregistion contest = new Contestregistion();
 //                contestTestDAO.changeContestStatusEnd(contestregistion);
 //                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStudentId(contestregistion.getStudentId());
                 contest.setStatus(0);
 //                return contestTestDAO.getContestRegistion(contestregistion);
                 return contest;
