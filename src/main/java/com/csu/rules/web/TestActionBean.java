@@ -274,14 +274,15 @@ public class TestActionBean extends AbstractActionBean {
     @RequestMapping(value = "/getContestStatus", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Contestregistion> getContestStatus(@RequestBody Contestregistion contestregistion) {
         try {
-            Contestregistion contestregistion2 = testService.isRegistedContest(contestregistion);
-            if (contestregistion2.getStudentId() == contestregistion.getStudentId()) {
+//            sun 20190424 取消报名
+//            Contestregistion contestregistion2 = testService.isRegistedContest(contestregistion);
+//            if (contestregistion2.getStudentId() == contestregistion.getStudentId()) {
                 Contestregistion contestregistion1 = testService.changeContestStatus(contestregistion);
                 return new ResponseEntity<Contestregistion>(contestregistion1, HttpStatus.OK);
-            } else {
-                Contestregistion contestregistion1 = new Contestregistion();
-                return new ResponseEntity<Contestregistion>(contestregistion1, HttpStatus.OK);
-            }
+//            } else {
+//                Contestregistion contestregistion1 = new Contestregistion();
+//                return new ResponseEntity<Contestregistion>(contestregistion1, HttpStatus.OK);
+//            }
         } catch (TestServiceException e) {
             throw new CatchServiceException(e);
         }

@@ -19,16 +19,21 @@ var contestCaseAnswer;
 var contestDiscussAnswer;
 
 function enterContest() {
-    if(getScore()==null) {
-        startContest();
-        setContestTime();
-        $('#startContestModal').attr("data-toggle", 'modal');
-        $('#startContestModal').attr("data-target", '#testModal');
-    }else{
-        $('#startContestModal').attr("data-toggle", '');
-        $('#startContestModal').attr("data-target", '');
-        $('#isContested').html("已考试");
+    if(!(getStudentId()==null || getStudentId()==undefined || getStudentId()=='')) {
+        if(getScore()==null) {
+            startContest();
+            setContestTime();
+            $('#startContestModal').attr("data-toggle", 'modal');
+            $('#startContestModal').attr("data-target", '#testModal');
+        }else{
+            $('#startContestModal').attr("data-toggle", '');
+            $('#startContestModal').attr("data-target", '');
+            $('#isContested').html("已考试");
+        }
+    } else {
+        $('#isContestLogin').html('请先登录');
     }
+
 }
 function startContest() {
     $('#testTitle').html("");
@@ -68,7 +73,7 @@ function startContest() {
                     "<th colspan=\"4\"><span>" + (i + 1) + ".</span>" + contestTitleList[i].name + "</th>" +
                     "</tr>" +
                     "<br>");
-                for (var j = 0; j < 4; j++) {
+                for (var j = 0; j < contestTitleList[i].options.length; j++) {
                     contestTitleList[i].options[j].checked = 0;
                     var str = "A";
                     $('#testTitle').append("<tr><td><input name=\"" + contestTitleList[i].titleId + "\" type=\"radio\" onclick=\"addTitleToContestList(" + i + "," + j + ")\"/>" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + contestTitleList[i].options[j].content + "&nbsp;</td></tr>");
@@ -268,7 +273,7 @@ function reviewContestAnswer() {
             "</tr>" +
             "<br>");
         var userAnswer = -1, standAnswer = 0;
-        for (var j = 0; j < 4; j++) {
+        for (var j = 0; j < correctContestTitleList[i].options.length; j++) {
             var str = "A";
             $('#testTitle').append("<tr><td><input name=\"" + contestTitleList[i].titleId +  "\" type=\"radio\" >" + String.fromCharCode(str.charCodeAt() + j) + ".&nbsp;" + contestTitleList[i].options[j].content + "&nbsp;</td></tr>"
             );
@@ -419,7 +424,7 @@ function setContestTime() {
     int = setInterval(getRTime, 1000);
 }
 function addTitleToContestList(title, choice) {
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < contestTitleList[title].options.length; i++) {
         if (i !== choice)
             contestTitleList[title].options[i].checked = 0;
     }

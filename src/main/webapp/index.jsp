@@ -1,5 +1,5 @@
-﻿<%@ page language="java" contentType="text/html; charset=utf-8"
-         pageEncoding="utf-8" %> 
+﻿﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+          pageEncoding="utf-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html
         class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg no-smil svgclippaths"
@@ -86,11 +86,11 @@
     <!--feedback结束-->
     <!--重写alert-->
     <%--<script>--%>
-        <%--window.alert = function(msg){--%>
-            <%--$("#alertContentId").html(msg);--%>
-            <%--$("#alertModalId").modal('show');--%>
-            <%--// setTimeout('$("#alertModalId").modal("hide")',5000);--%>
-        <%--};--%>
+    <%--window.alert = function(msg){--%>
+    <%--$("#alertContentId").html(msg);--%>
+    <%--$("#alertModalId").modal('show');--%>
+    <%--// setTimeout('$("#alertModalId").modal("hide")',5000);--%>
+    <%--};--%>
     <%--</script>--%>
     <!--重写失败-->
 
@@ -181,8 +181,8 @@
                         <br>
                         <div class="col-md-2 col-sm-0 col-xs-0"></div>
                         <div class="col-md-8 col-sm-12 col-xs-12 input-group input-group">
-								<%--<span class="input-group-addon"><i class="fa fa-key"></i>--%>
-								</span> <input type="password" class="form-control" placeholder="密码" id="password2">
+                            <%--<span class="input-group-addon"><i class="fa fa-key"></i>--%>
+                            </span> <input type="password" class="form-control" placeholder="密码" id="password2">
                         </div>
                         <div class="col-md-2 col-sm-0 col-xs-0"></div>
                         <br>
@@ -197,22 +197,22 @@
                         <div class="col-md-8 col-sm-12 col-xs-12 input-group input-group">
                             <%--<span class="input-group-addon"><i class="fa fa-user-o"></i>--%>
                             </span> <select class="form-control" id="college">
-                                        <option selected="selected" value="null">二级培养单位</option>
-                                     </select>
+                            <option selected="selected" value="null">二级培养单位</option>
+                        </select>
                         </div>
                         <div class="col-md-2 col-sm-0 col-xs-0"></div>
                         <br>
                         <div class="col-md-2 col-sm-0 col-xs-0"></div>
                         <div class="col-md-8 col-sm-12 col-xs-12 input-group input-group">
-                            
-                             <input type="text" class="form-control" placeholder="专业班级 如：计科1603" id="clazz">
+
+                            <input type="text" class="form-control" placeholder="专业班级 如：计科1603" id="clazz">
                         </div>
                         <div class="col-md-2 col-sm-0 col-xs-0"></div>
                         <br>
                         <%--<div class="col-md-2 col-sm-0 col-xs-0"></div>--%>
                         <%--<div class="col-md-8 col-sm-12 col-xs-12 input-group input-group">--%>
-                            <%--&lt;%&ndash;<span class="input-group-addon"><i class="fa fa-user-o"></i>&ndash;%&gt;--%>
-                            <%--</span> <input type="text" class="form-control" placeholder="班级" id="clazz">--%>
+                        <%--&lt;%&ndash;<span class="input-group-addon"><i class="fa fa-user-o"></i>&ndash;%&gt;--%>
+                        <%--</span> <input type="text" class="form-control" placeholder="班级" id="clazz">--%>
                         <%--</div>--%>
                         <%--<div class="col-md-2 col-sm-0 col-xs-0"></div>--%>
                         <%--<br>--%>
@@ -269,7 +269,7 @@
                 <button type="button" class="close"
                         data-toggle="modal" data-target="#exitModal" onclick="exitModal()">x
                 </button>
-                    <%--这个一直消失状态呀--%>
+                <%--这个一直消失状态呀--%>
                 <label class="modal-title" id="testId" style="display: none"></label>
                 <%--计时器的地方--%>
                 <div id="testCountMsg" class="HotDate">
@@ -405,26 +405,25 @@
                     </h1>
                     <p>
                         <strong>中南大学大学生网络安全知识竞赛</strong>
-                        以《党的十九大报告》、《习近平总书记在网络安全和信息化工作座谈会上的讲话》、
-                        《2018年两会工作报告》、《中华人民共和国网络安全法》等有关网络安全内容为纲，以电子政务安全、金融网络安全、电信网络安全、大学生上网安全、
-                        防范网络欺诈、网络安全技术等几个方面的内容为主，增强中南学子网络安全意识，
-                        引导广大学子树立正确的网络安全观，普及网络安全知识，提高网络素养，
-                        营造健康文明的网络环境，共同维护国家网络安全。
+                        本次网络安全只是竞赛以《党的十九大报告》、《习近平总书记在网络安全和信息化工作座谈会上的讲话》、
+                        《两会工作报告》等有关网络安全内容为纲，以电子政务安全、金融网络安全、电信网络安全、大学生上网安全、
+                        防范网络欺诈、网络安全技术等几个方面的内容为主，增强中南学子网络安全意识，引导广大学子树立正确的网络安全观，
+                        普及网络安全知识，提高网络素养，营造健康文明的网络环境，共同维护国家网络安全。
                     </p>
                     <%--<p class="popover-options">--%>
-                        <%--<a type="button" class="btn btn-primary btn-lg"><img--%>
-                                <%--src="img/phone.png" width="25" height="22"> 手机App端</a>--%>
+                    <%--<a type="button" class="btn btn-primary btn-lg"><img--%>
+                    <%--src="img/phone.png" width="25" height="22"> 手机App端</a>--%>
                     <%--</p>--%>
                     <%--<script>--%>
-                        <%--$(function () {--%>
-                            <%--$(".popover-options a")--%>
-                                <%--.popover(--%>
-                                    <%--{--%>
-                                        <%--trigger: 'hover',--%>
-                                        <%--html: true,--%>
-                                        <%--content: "<img src='img/erWeiMa.jpg' width='120' height='120'>"--%>
-                                    <%--});--%>
-                        <%--});--%>
+                    <%--$(function () {--%>
+                    <%--$(".popover-options a")--%>
+                    <%--.popover(--%>
+                    <%--{--%>
+                    <%--trigger: 'hover',--%>
+                    <%--html: true,--%>
+                    <%--content: "<img src='img/erWeiMa.jpg' width='120' height='120'>"--%>
+                    <%--});--%>
+                    <%--});--%>
                     <%--</script>--%>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 banner-img overflow-h">
@@ -452,7 +451,7 @@
                     <br>
                     <p>初赛面向  <strong>全体在校本科生及研究生</strong></p>
                     <br>
-                    <p>现系统提供<strong>模拟自测</strong>，初赛考试将于<strong>5月1日—5月10日开放</strong></p>
+                    <p>现系统提供<strong>模拟自测</strong>，初赛考试将于<strong>4月24日—5月10日开放</strong></p>
                     <br>
                     <p>模拟自测可以重复进行，初赛<strong>每个账号只能考一次</strong></p>
                     <br>
@@ -464,29 +463,29 @@
                 </div>
                 <%--这里需要来修改前端，或者干脆就不要了--%>
                 <%--<div class="col-md-5">--%>
-                    <%--<div class="carousel slide carousel-v1" id="myCarousel">--%>
-                        <%--<div class="carousel-inner" id="pictureNotice">--%>
-                            <%--<div class="item active">--%>
-                                <%--&lt;%&ndash;<img alt="" src="img/2.jpg">&ndash;%&gt;--%>
-                                <%--&lt;%&ndash;<div class="carousel-caption">&ndash;%&gt;--%>
-                                    <%--&lt;%&ndash;<p>1234</p>&ndash;%&gt;--%>
-                                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
-                        <%--<div class="carousel-arrow">--%>
-                            <%--&lt;%&ndash;<a class="left carousel-control" href="#myCarousel"&ndash;%&gt;--%>
-                               <%--&lt;%&ndash;data-slide="prev"> <i class="fa fa-angle-left"></i>&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;</a> <a class="right carousel-control" href="#myCarousel"&ndash;%&gt;--%>
-                                    <%--&lt;%&ndash;data-slide="next"> <i class="fa fa-angle-right"></i>&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--<div class="carousel slide carousel-v1" id="myCarousel">--%>
+                <%--<div class="carousel-inner" id="pictureNotice">--%>
+                <%--<div class="item active">--%>
+                <%--&lt;%&ndash;<img alt="" src="img/2.jpg">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<div class="carousel-caption">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<p>1234</p>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+                <%--</div>--%>
+                <%--</div>--%>
+                <%--<div class="carousel-arrow">--%>
+                <%--&lt;%&ndash;<a class="left carousel-control" href="#myCarousel"&ndash;%&gt;--%>
+                <%--&lt;%&ndash;data-slide="prev"> <i class="fa fa-angle-left"></i>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</a> <a class="right carousel-control" href="#myCarousel"&ndash;%&gt;--%>
+                <%--&lt;%&ndash;data-slide="next"> <i class="fa fa-angle-right"></i>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
                 <%--<div class="col-md-7">--%>
-                    <%--&lt;%&ndash;<table style="font-size: 16px">&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;<tbody id="textNotice">&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</tbody>&ndash;%&gt;--%>
-                    <%--&lt;%&ndash;</table>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<table style="font-size: 16px">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<tbody id="textNotice">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</tbody>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</table>&ndash;%&gt;--%>
                 <%--</div>--%>
             </div>
         </div>
@@ -520,9 +519,9 @@
                                class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"
                                data-toggle="" data-target=""
                                id="enterSimulation"
-                              onclick="enterTitle()"
+                               onclick="enterTitle()"
                             >开始练习</a>
-                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 benefit-box animated fadeIn wow animated"
@@ -566,108 +565,108 @@
                     </div>
                 </div>
                 <%--<div class="col-md-4 benefit-box animated fadeIn wow animated"--%>
-                     <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
-                     <%--data-wow-duration="1.5s">--%>
-                    <%--<div class="benefit equal-height-column"--%>
-                         <%--style="height: 300px; width: 310px;">--%>
-                        <%--<i class="fa  fa-database fa-3x"></i>--%>
-                        <%--<h3>校规校纪模拟考试</h3>--%>
-                        <%--<br>--%>
-                        <%--<ul class="list-unstyled">--%>
-                            <%--<li id="isSimulationJudgeLogin" class="g-color-red">&nbsp;</li>--%>
-                        <%--</ul>--%>
-                        <%--<div class="pricing-v9-footer">--%>
-                            <%--<a type="button"--%>
-                               <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
-                               <%--data-toggle="" data-target=""--%>
-                               <%--id="enterSimulationJudge"--%>
-                               <%--onclick="enterJudgeTitle()"--%>
-                            <%-->判断练习</a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
+                <%--data-wow-duration="1.5s">--%>
+                <%--<div class="benefit equal-height-column"--%>
+                <%--style="height: 300px; width: 310px;">--%>
+                <%--<i class="fa  fa-database fa-3x"></i>--%>
+                <%--<h3>校规校纪模拟考试</h3>--%>
+                <%--<br>--%>
+                <%--<ul class="list-unstyled">--%>
+                <%--<li id="isSimulationJudgeLogin" class="g-color-red">&nbsp;</li>--%>
+                <%--</ul>--%>
+                <%--<div class="pricing-v9-footer">--%>
+                <%--<a type="button"--%>
+                <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                <%--data-toggle="" data-target=""--%>
+                <%--id="enterSimulationJudge"--%>
+                <%--onclick="enterJudgeTitle()"--%>
+                <%-->判断练习</a>--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
                 <%--<div class="col-md-4 benefit-box animated fadeIn wow animated"--%>
-                     <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s; animation-delay: 0.5s;"--%>
-                     <%--data-wow-duration="1.5s" data-wow-delay=".5s">--%>
-                    <%--<div class="benefit equal-height-column"--%>
-                         <%--style="height: 300px; width: 310px;">--%>
-                        <%--<i class="fa  fa-database fa-3x"></i>--%>
-                        <%--<h3>单选题错题重做</h3>--%>
-                        <%--<br>--%>
-                        <%--<ul class="list-unstyled">--%>
-                            <%--<li id="isWrongTitleLogin" class="g-color-red">&nbsp;</li>--%>
-                        <%--</ul>--%>
-                        <%--<div class="pricing-v9-footer">--%>
-                            <%--<a--%>
-                                    <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
-                                    <%--id="enterWrongTitle"--%>
-                                    <%--data-toggle="" data-target="" onclick="enterWrongTitle()"--%>
-                            <%-->进入</a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s; animation-delay: 0.5s;"--%>
+                <%--data-wow-duration="1.5s" data-wow-delay=".5s">--%>
+                <%--<div class="benefit equal-height-column"--%>
+                <%--style="height: 300px; width: 310px;">--%>
+                <%--<i class="fa  fa-database fa-3x"></i>--%>
+                <%--<h3>单选题错题重做</h3>--%>
+                <%--<br>--%>
+                <%--<ul class="list-unstyled">--%>
+                <%--<li id="isWrongTitleLogin" class="g-color-red">&nbsp;</li>--%>
+                <%--</ul>--%>
+                <%--<div class="pricing-v9-footer">--%>
+                <%--<a--%>
+                <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                <%--id="enterWrongTitle"--%>
+                <%--data-toggle="" data-target="" onclick="enterWrongTitle()"--%>
+                <%-->进入</a>--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
                 <%--<div class="col-md-4 benefit-box animated fadeIn wow animated"--%>
-                     <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
-                     <%--data-wow-duration="1.5s">--%>
-                    <%--<div class="benefit equal-height-column"--%>
-                         <%--style="height: 300px; width: 310px;">--%>
-                        <%--<i class="fa  fa-database fa-3x"></i>--%>
-                        <%--<h3>校规校纪模拟考试</h3>--%>
-                        <%--<br>--%>
-                        <%--<ul class="list-unstyled">--%>
-                            <%--<li id="isSimulationShortLogin" class="g-color-red">&nbsp;</li>--%>
-                        <%--</ul>--%>
-                        <%--<div class="pricing-v9-footer">--%>
-                            <%--<a type="button"--%>
-                               <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
-                               <%--data-toggle="" data-target=""--%>
-                               <%--id="enterSimulationShort"--%>
-                               <%--onclick="enterShortTitle()"--%>
-                            <%-->简答练习</a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
+                <%--data-wow-duration="1.5s">--%>
+                <%--<div class="benefit equal-height-column"--%>
+                <%--style="height: 300px; width: 310px;">--%>
+                <%--<i class="fa  fa-database fa-3x"></i>--%>
+                <%--<h3>校规校纪模拟考试</h3>--%>
+                <%--<br>--%>
+                <%--<ul class="list-unstyled">--%>
+                <%--<li id="isSimulationShortLogin" class="g-color-red">&nbsp;</li>--%>
+                <%--</ul>--%>
+                <%--<div class="pricing-v9-footer">--%>
+                <%--<a type="button"--%>
+                <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                <%--data-toggle="" data-target=""--%>
+                <%--id="enterSimulationShort"--%>
+                <%--onclick="enterShortTitle()"--%>
+                <%-->简答练习</a>--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
                 <%--<div class="col-md-4 benefit-box animated fadeIn wow animated"--%>
-                     <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
-                     <%--data-wow-duration="1.5s">--%>
-                    <%--<div class="benefit equal-height-column"--%>
-                         <%--style="height: 300px; width: 310px;">--%>
-                        <%--<i class="fa  fa-database fa-3x"></i>--%>
-                        <%--<h3>判断题错题重做</h3>--%>
-                        <%--<br>--%>
-                        <%--<ul class="list-unstyled">--%>
-                            <%--<li id="isSimulationCaseLogin" class="g-color-red">&nbsp;</li>--%>
-                        <%--</ul>--%>
-                        <%--<div class="pricing-v9-footer">--%>
-                            <%--<a type="button"--%>
-                               <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
-                               <%--data-toggle="" data-target=""--%>
-                               <%--id="enterSimulationCase"--%>
-                               <%--onclick=""--%>
-                            <%-->暂不可用</a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
+                <%--data-wow-duration="1.5s">--%>
+                <%--<div class="benefit equal-height-column"--%>
+                <%--style="height: 300px; width: 310px;">--%>
+                <%--<i class="fa  fa-database fa-3x"></i>--%>
+                <%--<h3>判断题错题重做</h3>--%>
+                <%--<br>--%>
+                <%--<ul class="list-unstyled">--%>
+                <%--<li id="isSimulationCaseLogin" class="g-color-red">&nbsp;</li>--%>
+                <%--</ul>--%>
+                <%--<div class="pricing-v9-footer">--%>
+                <%--<a type="button"--%>
+                <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                <%--data-toggle="" data-target=""--%>
+                <%--id="enterSimulationCase"--%>
+                <%--onclick=""--%>
+                <%-->暂不可用</a>--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
                 <%--<div class="col-md-4 benefit-box animated fadeIn wow animated"--%>
-                     <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
-                     <%--data-wow-duration="1.5s">--%>
-                    <%--<div class="benefit equal-height-column"--%>
-                         <%--style="height: 300px; width: 310px;">--%>
-                        <%--<i class="fa  fa-database fa-3x"></i>--%>
-                        <%--<h3>多选题错题重做</h3>--%>
-                        <%--<br>--%>
-                        <%--<ul class="list-unstyled">--%>
-                            <%--<li id="isSimulationDiscussLogin" class="g-color-red">&nbsp;</li>--%>
-                        <%--</ul>--%>
-                        <%--<div class="pricing-v9-footer">--%>
-                            <%--<a type="button"--%>
-                               <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
-                               <%--data-toggle="" data-target=""--%>
-                               <%--id="enterSimulationDiscuss"--%>
-                               <%--onclick=""--%>
-                            <%-->暂不可用</a>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
+                <%--style="visibility: visible; animation-name: fadeIn; animation-duration: 1.5s;"--%>
+                <%--data-wow-duration="1.5s">--%>
+                <%--<div class="benefit equal-height-column"--%>
+                <%--style="height: 300px; width: 310px;">--%>
+                <%--<i class="fa  fa-database fa-3x"></i>--%>
+                <%--<h3>多选题错题重做</h3>--%>
+                <%--<br>--%>
+                <%--<ul class="list-unstyled">--%>
+                <%--<li id="isSimulationDiscussLogin" class="g-color-red">&nbsp;</li>--%>
+                <%--</ul>--%>
+                <%--<div class="pricing-v9-footer">--%>
+                <%--<a type="button"--%>
+                <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                <%--data-toggle="" data-target=""--%>
+                <%--id="enterSimulationDiscuss"--%>
+                <%--onclick=""--%>
+                <%-->暂不可用</a>--%>
+                <%--</div>--%>
+                <%--</div>--%>
                 <%--</div>--%>
 
             </div>
@@ -713,7 +712,7 @@
                             <%--是否考试：<span class="g-color-default" id="isTested">未登录</span>--%>
                             测试可重复进行
                         </div>
-                            <div class="pricing-v9-footer" id="yesToTest">
+                        <div class="pricing-v9-footer" id="yesToTest">
                             <a
                                     class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"
                                     data-toggle="" data-target="" id="startTestModal"
@@ -748,14 +747,15 @@
                             <li id="isContested" class="g-color-red">&nbsp;</li>
                         </ul>
                         <div class="pricing-v9-price">
-                            是否报名：<span class="g-color-default" id="isRegisted">未登录</span>
+                            <%--是否报名：<span class="g-color-default" id="isRegisted">未登录</span>--%>
+                            竞赛仅可参加一次<span class="g-color-default" id="isRegisted"></span>
                         </div>
-                        <div class="pricing-v9-footer" id="regist">
-                            <a
-                                    class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"
-                                    onclick="regist()">报名</a>
+                        <div class="pricing-v9-footer" id="regist" style="display: none">
+                            <%--<a--%>
+                                    <%--class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"--%>
+                                    <%--onclick="regist()">报名</a>--%>
                         </div>
-                        <div class="pricing-v9-footer" id="enter" style="display:none">
+                        <div class="pricing-v9-footer" id="enter">
                             <a
                                     class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"
                                     id="startContestModal"
@@ -764,7 +764,7 @@
                         </div>
                         <div class="pricing-v9-footer" id="notBegin" style="display:none">
                             <a
-                                    class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x"
+                                    class="btn-u btn-u-lg btn-u-light-green btn-u-upper rounded-2x disabled"
                                     disabled="true">未开始</a>
                         </div>
                         <div class="pricing-v9-footer" id="isEnd" style="display:none">
@@ -849,11 +849,11 @@
     </div>
 </section>
 <!-- 考试排名结束 -->
-<div class="zs" style="text-align:center;display:none">   
-<canvas id="cvs" width="1024" height="723" style="position:absolute">
- here is image
-</canvas>
-<img id="img" src="img/zhengshu.png" width="1024" height="723"  crossorigin="anonymous">
+<div class="zs" style="text-align:center;display:none">
+    <canvas id="cvs" width="1024" height="723" style="position:absolute">
+        here is image
+    </canvas>
+    <img id="img" src="img/zhengshu.png" width="1024" height="723"  crossorigin="anonymous">
 </div>
 
 <hr>
@@ -894,7 +894,7 @@
                                         <label id="submitMessage"></label>
                                         <p>
                                             <button class="btn-u btn-u-lg btn-u-upper rounded-2x"
-                                                     onclick="feedbackClick()">提交
+                                                    onclick="feedbackClick()">提交
                                             </button>
                                         </p>
                                     </div>
@@ -956,22 +956,22 @@
 <!-- JS Implementing Plugins -->
 <script src="plugins/owl-carousel2/owl.carousel.min.js"></script>
 <script>
-function draw(){
+    function draw(){
         $(".zs").css("display","block");
         var username = getAccount().username;
         var college = getAccount().college;
         var nob = getAccount().studentId.toString();
-        var r = confirm("您是研究生吗？");
-        if (r == true){
-            if (nob.length == 8) {nob = 0  +nob}
-        }
-          else{
-            if (nob.length == 9) {nob = 0 + nob};
-            if (nob.length == 13) {
-                alphabet= String.fromCharCode(64 + parseInt(nob.substr(1, 2))); 
-                nob = alphabet + nob.slice("3");
-            };
-        };
+        // var r = confirm("您是研究生吗？");
+        // if (r == true){
+        //     if (nob.length == 8) {nob = 0  +nob}
+        // }
+        // else{
+        //     if (nob.length == 9) {nob = 0 + nob};
+        //     if (nob.length == 13) {
+        //         alphabet= String.fromCharCode(64 + parseInt(nob.substr(1, 2)));
+        //         nob = alphabet + nob.slice("3");
+        //     };
+        // };
         var img = document.getElementById("img");
         var canvas=document.getElementById("cvs");
         var ctx=canvas.getContext("2d");
@@ -980,21 +980,21 @@ function draw(){
         ctx.font="25px 黑体 ";
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.fillText(username,490,280);
-        //var nob="山地车";   
+        //var nob="山地车";
         ctx.font="25px 黑体";
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.fillText(nob,720,250);
-        //var college="阿三";   
+        //var college="阿三";
         ctx.font="25px 黑体";
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.fillText(college,160,280);
-        }
+    }
 
     function Download(){
         var score = getScore();
         if (score >= 70) {
-              draw();
-              $("#img").css("visibility","hidden");
+            draw();
+            $("#img").css("visibility","hidden");
             // var type ='png';
             // var d=document.getElementById("cvs");
             // var imgdata=d.toDataURL(type);
@@ -1013,14 +1013,14 @@ function draw(){
             //     event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
             //     save_link.dispatchEvent(event);
             // };
-            // var filename=''+new Date().getDate()+'.'+type;  
-            // savaFile(imgdata,filename);  
-            }
-                else{
-                    alert("很抱歉，成绩不足70分，无法生成证书！")
-                };
-        
+            // var filename=''+new Date().getDate()+'.'+type;
+            // savaFile(imgdata,filename);
+        }
+        else{
+            alert("很抱歉，成绩不足70分，无法生成证书！")
         };
+
+    };
 </script>
 </body>
 </html>

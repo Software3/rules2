@@ -24,6 +24,8 @@ function register() {
         $('#registerMessage').html("请选择学院");
     } else if(studentId==="" || password==="" || userName==="" || college==="null" || clazz===""){ // 检查是否输入完整
         $('#registerMessage').html("请先输入完整信息");
+    } else if(password.length < 6) { // 检查密码长度
+        $('#registerMessage').html("密码长度需大于六位");
     } else{
         if(re1.test(nob)){
             var a = "";
@@ -58,7 +60,7 @@ function registerInfoForJson(userInfoJson, accountInfoJson) {
                 $('#registerMessage').html("该学号已注册");
                 alert("该学号已被注册");
             }   */
-        },    
+        },
         error: function (xhr) {
             // 导致出错的原因较多，以后再研究
             $('#registerMessage').html("该学号已注册");

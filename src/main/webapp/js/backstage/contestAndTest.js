@@ -524,7 +524,7 @@ function getContestRandomTitle() {
                     "<th colspan=\"4\"><span>" + (i + 1) + ".</span>" + testTitleList[i].name + "</th>" +
                     "</tr>" +
                     "<br>");
-                for (var j = 0; j < 4; j++) {
+                for (var j = 0; j < testTitleList[i].options.length; j++) {
                     var str = "A";
                     $('#contest_title').append("<tr><td><input name=\"" + testTitleList[i].titleId + "\" type=\"radio\"&nbsp;" + testTitleList[i].options[j].content + "&nbsp;</td></tr>");
                 }

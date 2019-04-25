@@ -47,11 +47,13 @@ $(function () {
                 $('#contestName').append("考试名称:" + contestInfo.name);
                 $('#contest_name').append("考试名称:" + contestInfo.name);
                 contestId = contestInfo.testId;
+                // contestId = contestInfo.testId;
                 contestDuration=contestInfo.duration;
                 contestEndTime=contestInfo.endTime;
             }else{
                 $('#contestInfo').html("暂无竞赛");
                 $('#regist').hide();
+                $('#enter').hide();
             }
         },
         error: function (xhr) {
@@ -72,6 +74,7 @@ $(function () {
 function getContestId() {
     return contestId;
 }
+
 function getContestDuration() {
     return contestDuration;
 }

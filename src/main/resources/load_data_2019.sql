@@ -1,3 +1,11 @@
+### admin ###
+INSERT INTO admin(account, password, username, role, rolerange) VALUES('csu@root', 'csu@root', '系统管理员',0, '@csu#@csu#@csu#@csu');
+
+### titlediff ###
+INSERT INTO titlediff VALUES(1, '易');
+INSERT INTO titlediff VALUES(2, '中');
+INSERT INTO titlediff VALUES(3, '难');
+
 INSERT INTO title(title_id, name, diff_id, score) VALUES (1, "以下哪个选项不能减少用户计算机被攻击的可能性。（ ）", 1, 2);
 INSERT INTO choice(option_id, title_id, content, checked) VALUES (1, 1, "选用比较长和复杂的用户登录口令", 0);
 INSERT INTO choice(option_id, title_id, content, checked) VALUES (2, 1, "使用防病毒软件", 0);

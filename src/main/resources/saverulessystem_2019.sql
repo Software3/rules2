@@ -268,8 +268,7 @@ CREATE TABLE `title`  (
   `diff_id` int(11) NOT NULL COMMENT '题目难度',
   `score` int(11) NOT NULL COMMENT '分值',
   PRIMARY KEY (`title_id`) USING BTREE,
-  INDEX `title_fk_1`(`diff_id`) USING BTREE,
-  CONSTRAINT `title_fk_1` FOREIGN KEY (`diff_id`) REFERENCES `titlediff` (`diff_id`) ON DELETE RESTRICT ON UPDATE CASCADE
+  INDEX `title_fk_1`(`diff_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 317 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------

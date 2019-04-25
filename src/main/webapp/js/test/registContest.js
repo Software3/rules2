@@ -1,9 +1,9 @@
 /**
  * Created by GF on 2017/6/25.
  */
-function registContest(){
-    var student_id=getStudentId();
-    var contest_id=getContestId();
+function registContest() {
+    var student_id = getStudentId();
+    var contest_id = getContestId();
     var registString = {studentId: student_id, testId: contest_id};
     var contestRegistion = $.toJSON(registString);
     $.ajaxSetup({contentType: 'application/json'});
@@ -13,9 +13,9 @@ function registContest(){
         method: 'POST',
         data: contestRegistion,
         success: function (data) {
-            if(data.result=="success"){
-               isRegisted();
-               changeStatus();
+            if (data.result == "success") {
+                // isRegisted();
+                changeStatus();
             }
             changeStatus();
         },
@@ -34,11 +34,12 @@ function registContest(){
         console.log('complete');
     });
 }
+
 //Sunss
 function regist() {
-    if(getStudentId()!=null){
-        registContest();
-    }else{
-        $("#isContestLogin").html("请先登录");
-    }
+    // if (getStudentId() != null) {
+    //     registContest();
+    // } else {
+    //     $("#isContestLogin").html("请先登录");
+    // }
 }

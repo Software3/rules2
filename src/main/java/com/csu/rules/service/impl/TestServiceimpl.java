@@ -85,17 +85,24 @@ public class TestServiceimpl implements TestService {
             Timestamp endTime = testinfo.getEndTime();
             if (currentTime.before(endTime) && currentTime.after(startTime)) {
                 Contestregistion contest = new Contestregistion();
-                contestTestDAO.changeContestStatusBegin(contestregistion);
-                contest = contestTestDAO.getContestRegistion(contestregistion);
+//                contestTestDAO.changeContestStatusBegin(contestregistion);
+//                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStatus(1);
                 return contest;
             }
             else if (currentTime.after(endTime)) {
                 Contestregistion contest = new Contestregistion();
-                contestTestDAO.changeContestStatusEnd(contestregistion);
-                contest = contestTestDAO.getContestRegistion(contestregistion);
+//                contestTestDAO.changeContestStatusEnd(contestregistion);
+//                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStatus(2);
                 return contest;
             }else{
-                return contestTestDAO.getContestRegistion(contestregistion);
+                Contestregistion contest = new Contestregistion();
+//                contestTestDAO.changeContestStatusEnd(contestregistion);
+//                contest = contestTestDAO.getContestRegistion(contestregistion);
+                contest.setStatus(0);
+//                return contestTestDAO.getContestRegistion(contestregistion);
+                return contest;
             }
         } catch (PersistenceException e) {
             TestServiceException te = new TestServiceException();
