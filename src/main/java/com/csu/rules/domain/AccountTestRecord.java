@@ -1,6 +1,9 @@
 package com.csu.rules.domain;
 
+import com.csu.rules.utils.DateUtils;
+
 import java.io.Serializable;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
@@ -19,6 +22,10 @@ public class AccountTestRecord implements Serializable {
     private Timestamp submitTime;
     private Timestamp startTime;
     private long useTime;
+
+    // sun 后台换成合适的形式...不让前端去转了
+    private String submit;
+    private String use;
 
     public AccountTestRecord(String studentId, String username, String clazz, int grade, String major, String college, Integer score) {
         this.studentId = studentId;
@@ -46,6 +53,9 @@ public class AccountTestRecord implements Serializable {
         this.score = score;
         this.submitTime = (Timestamp) submitTime;
         this.startTime = (Timestamp) startTime;
+        this.useTime = this.submitTime.getTime() - this.startTime.getTime();
+        this.submit = DateUtils.formatDate(new Date(this.submitTime.getTime()), "yyyy-MM-dd HH:mm:ss");
+        this.use = DateUtils.formatDateTime(this.useTime);
     }
 
     public String getStudentId() {
@@ -146,5 +156,21 @@ public class AccountTestRecord implements Serializable {
                 ", startTime=" + startTime +
                 ", useTime=" + useTime +
                 '}';
+    }
+
+    public String getSubmit() {
+        return submit;
+    }
+
+    public void setSubmit(String submit) {
+        this.submit = submit;
+    }
+
+    public String getUse() {
+        return use;
+    }
+
+    public void setUse(String use) {
+        this.use = use;
     }
 }

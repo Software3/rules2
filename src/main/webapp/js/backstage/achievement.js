@@ -31,7 +31,7 @@ function addOption(select, data, type) {
  * @type {[*]}
  */
 // var pNames = ["studentId", "username", "college", "major", "grade", "clazz", "score"];
-var pNames = ["studentId", "username", "college", "clazz", "score", "submitTime", "useTime"];
+var pNames = ["studentId", "username", "college", "clazz", "score", "submit", "use"];
 /**
  * 将item对象变成一个tr对象
  * @param item
