@@ -30,7 +30,13 @@ public class AccountTestRecord implements Serializable {
         this.score = score;
     }
 
-    public AccountTestRecord(String studentId, String username, String clazz, int grade, String major, String college, Integer score, Timestamp submitTime, Timestamp startTime) {
+    /**
+     * sun bug
+     * hibernate 会报出org.hibernate.hql.internal.ast.QuerySyntaxException: Unable to locate appropriate constructor on class
+     * Timestamp会变成java.util.date
+     * 可能是hibernate自身的一个bug 这里以object入参 之后强转为Timestamp
+     */
+    public AccountTestRecord(String studentId, String username, String clazz, int grade, String major, String college, Integer score, Object submitTime, Object startTime) {
         this.studentId = studentId;
         this.username = username;
         this.clazz = clazz;
@@ -38,8 +44,8 @@ public class AccountTestRecord implements Serializable {
         this.major = major;
         this.college = college;
         this.score = score;
-        this.submitTime = submitTime;
-        this.startTime = startTime;
+        this.submitTime = (Timestamp) submitTime;
+        this.startTime = (Timestamp) startTime;
     }
 
     public String getStudentId() {
