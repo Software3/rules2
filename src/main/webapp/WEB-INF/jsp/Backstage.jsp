@@ -599,10 +599,12 @@
                                         <th>学号</th>
                                         <th>姓名</th>
                                         <th>二级培养单位</th>
-                                        <th>专业</th>
-                                        <th>年级</th>
+                                        <%--<th>专业</th>--%>
+                                        <%--<th>年级</th>--%>
                                         <th>班级</th>
                                         <th>分数</th>
+                                        <th>提交时间</th>
+                                        <th>用时</th>
                                         </thead>
                                         <tbody id="achieve_tbody"></tbody>
                                     </table>

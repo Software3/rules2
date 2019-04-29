@@ -161,7 +161,6 @@ const wopts = {bookType: 'xlsx', bookSST: false, type: 'binary'};//这里的数�
 // const wopts = { bookType: 'fods', bookSST: false, type: 'binary' };//fods格式
 // const wopts = { bookType: 'biff2', bookSST: false, type: 'binary' };//xls格式
 
-//Sunss 导出成绩吗
 function downloadExl(data) {
     const wb = {SheetNames: ['Sheet1'], Sheets: {}, Props: {}};
     wb.Sheets['Sheet1'] = XLSX.utils.json_to_sheet(data);//通过json_to_sheet转成单页(Sheet)数据

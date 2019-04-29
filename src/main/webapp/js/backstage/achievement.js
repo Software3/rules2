@@ -30,7 +30,8 @@ function addOption(select, data, type) {
  * 表头
  * @type {[*]}
  */
-var pNames = ["studentId", "username", "college", "major", "grade", "clazz", "score"];
+// var pNames = ["studentId", "username", "college", "major", "grade", "clazz", "score"];
+var pNames = ["studentId", "username", "college", "clazz", "score", "submitTime", "useTime"];
 /**
  * 将item对象变成一个tr对象
  * @param item
