@@ -163,8 +163,10 @@ public class TestRecordDAOimpl extends AbstractDAO implements TestRecordDAO {
             hql = hql.substring(0, hql.length() - 5);
             hql += " and a.studentId=t.studentId";
         }
+        // sun 20190429 为什么这里会有一个testId=1 应该是type=1诶...
+//        hql += " and t.testId=1";
+        hql += " and t.type=1";
         System.out.println(hql);
-        hql += " and t.testId=1";
         return hql;
     }
 
