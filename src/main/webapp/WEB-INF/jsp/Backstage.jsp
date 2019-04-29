@@ -558,7 +558,8 @@
                                 <br>
                                 <div style="width:100%;font-size: 15px;">
                                     <span>二级培养单位:</span>
-                                    <select id="college" onchange="getMajor(this.value, $('#major'), $('#clazz'))">
+                                    <%--<select id="college" onchange="getMajor(this.value, $('#major'), $('#clazz'))">--%>
+                                    <select id="college">
                                         <option value="">请选择二级培养单位(默认全校)</option>
                                     </select>
                                     <%--<span>专业:</span>--%>
@@ -580,6 +581,8 @@
                                     <%--</select>--%>
                                     <span>分数线</span>
                                     <select id="score">
+                                        <option value="0">0</option>
+                                        <option value="70">70</option>
                                     </select>
                                 </div>
                                 <br>
