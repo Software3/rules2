@@ -144,10 +144,10 @@ public class TestRecordDAOimpl extends AbstractDAO implements TestRecordDAO {
     }
 
     private String formatHql(String clazz, int grade, String major, String college, int level) {
-        // Sunss 这里我只要竞赛信息
+        // sun 这里我只要竞赛信息
 //        String hql =  "select new com.csu.rules.domain.AccountTestRecord(a.studentId, a.username, a.clazz, a.grade, a.major, a.college, t.score) " +
 //                "from Testrecord as t, Account as a where ";
-        String hql = "select new com.csu.rules.domain.AccountTestRecord(a.studentId, a.username, a.clazz, a.grade, a.major, a.college, t.score) " +
+        String hql = "select new com.csu.rules.domain.AccountTestRecord(a.studentId, a.username, a.clazz, a.grade, a.major, a.college, t.score, t.submitTime, t.startTime) " +
                 "from Testrecord as t, Account as a, Testinfo as ti where ";
         int initSize = hql.length();
         hql += (clazz != null && !clazz.equals("") ? "a.clazz=\'" + clazz + "\' and " : "");
@@ -157,7 +157,7 @@ public class TestRecordDAOimpl extends AbstractDAO implements TestRecordDAO {
         hql += (level != 0 ? "t.score>=" + level + " and " : "");
         // 如果四个字段全没有，即字符串为null或者空字符，数字为0, 此时查询全校记录
         if (hql.length() == initSize) {
-            hql = "select new com.csu.rules.domain.AccountTestRecord(a.studentId, a.username, a.clazz, a.grade, a.major, a.college, t.score) " +
+            hql = "select new com.csu.rules.domain.AccountTestRecord(a.studentId, a.username, a.clazz, a.grade, a.major, a.college, t.score, t.submitTime, t.startTime) " +
                     "from Testrecord as t, Account as a, Testinfo as ti where a.studentId=t.studentId";
         } else {
             hql = hql.substring(0, hql.length() - 5);
