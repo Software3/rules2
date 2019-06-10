@@ -853,7 +853,7 @@
     <canvas id="cvs" width="1024" height="723" style="position:absolute">
         here is image
     </canvas>
-    <img id="img" src="img/zhengshu.png" width="1024" height="723"  crossorigin="anonymous">
+    <img id="img" src="img/zhengshu2019.png" width="1024" height="723"  crossorigin="anonymous">
 </div>
 
 <hr>

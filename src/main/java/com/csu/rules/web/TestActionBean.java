@@ -559,14 +559,14 @@ public class TestActionBean extends AbstractActionBean {
 
         try {
             // Sunss这里输出了乱码，这是为什么呢....所以就肯定是查询不到了
-            System.out.println(college);
-            System.out.println(college);
-            System.out.println(college);
-            System.out.println(college);
-            System.out.println(college);
-            System.out.println(level);
-            System.out.println(level);
-            System.out.println(level);
+//            System.out.println(college);
+//            System.out.println(college);
+//            System.out.println(college);
+//            System.out.println(college);
+//            System.out.println(college);
+//            System.out.println(level);
+//            System.out.println(level);
+//            System.out.println(level);
             List<AccountTestRecord> testrecordList = testService.getTestRecordByCondition(clazz, grade, major, college, level);
             return new ResponseEntity<List<AccountTestRecord>>(testrecordList, HttpStatus.OK);
         } catch (TestServiceException te) {
